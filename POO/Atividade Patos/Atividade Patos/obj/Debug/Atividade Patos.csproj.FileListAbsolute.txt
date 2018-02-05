@@ -1,0 +1,7 @@
+C:\Users\Familia Paiva\Desktop\Patos 2\Atividade Patos\Atividade Patos\bin\Debug\Atividade Patos.exe.config
+C:\Users\Familia Paiva\Desktop\Patos 2\Atividade Patos\Atividade Patos\bin\Debug\Atividade Patos.exe
+C:\Users\Familia Paiva\Desktop\Patos 2\Atividade Patos\Atividade Patos\bin\Debug\Atividade Patos.pdb
+C:\Users\Familia Paiva\Desktop\Patos 2\Atividade Patos\Atividade Patos\obj\Debug\Atividade Patos.csprojResolveAssemblyReference.cache
+C:\Users\Familia Paiva\Desktop\Patos 2\Atividade Patos\Atividade Patos\obj\Debug\Atividade Patos.csproj.CoreCompileInputs.cache
+C:\Users\Familia Paiva\Desktop\Patos 2\Atividade Patos\Atividade Patos\obj\Debug\Atividade Patos.exe
+C:\Users\Familia Paiva\Desktop\Patos 2\Atividade Patos\Atividade Patos\obj\Debug\Atividade Patos.pdb
