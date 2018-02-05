@@ -1,0 +1,14 @@
+C:\Users\1077336\Desktop\LabAED1\LabAED1\bin\Debug\LabAED1.exe.config
+C:\Users\1077336\Desktop\LabAED1\LabAED1\bin\Debug\LabAED1.exe
+C:\Users\1077336\Desktop\LabAED1\LabAED1\bin\Debug\LabAED1.pdb
+C:\Users\1077336\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.csprojResolveAssemblyReference.cache
+C:\Users\1077336\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.csproj.CoreCompileInputs.cache
+C:\Users\1077336\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.exe
+C:\Users\1077336\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.pdb
+C:\Users\Familia Paiva\Desktop\LabAED1\LabAED1\bin\Debug\LabAED1.exe.config
+C:\Users\Familia Paiva\Desktop\LabAED1\LabAED1\bin\Debug\LabAED1.exe
+C:\Users\Familia Paiva\Desktop\LabAED1\LabAED1\bin\Debug\LabAED1.pdb
+C:\Users\Familia Paiva\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.csprojResolveAssemblyReference.cache
+C:\Users\Familia Paiva\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.csproj.CoreCompileInputs.cache
+C:\Users\Familia Paiva\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.exe
+C:\Users\Familia Paiva\Desktop\LabAED1\LabAED1\obj\Debug\LabAED1.pdb
