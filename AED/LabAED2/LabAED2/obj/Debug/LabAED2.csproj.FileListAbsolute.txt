@@ -5,3 +5,10 @@ C:\Users\Familia Paiva\Desktop\LabAED2\LabAED2\obj\Debug\LabAED2.csprojResolveAs
 C:\Users\Familia Paiva\Desktop\LabAED2\LabAED2\obj\Debug\LabAED2.csproj.CoreCompileInputs.cache
 C:\Users\Familia Paiva\Desktop\LabAED2\LabAED2\obj\Debug\LabAED2.exe
 C:\Users\Familia Paiva\Desktop\LabAED2\LabAED2\obj\Debug\LabAED2.pdb
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\AED\LabAED2\LabAED2\obj\Debug\LabAED2.csprojResolveAssemblyReference.cache
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\AED\LabAED2\LabAED2\obj\Debug\LabAED2.csproj.CoreCompileInputs.cache
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\AED\LabAED2\LabAED2\obj\Debug\LabAED2.exe
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\AED\LabAED2\LabAED2\obj\Debug\LabAED2.pdb
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\AED\LabAED2\LabAED2\bin\Debug\LabAED2.exe.config
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\AED\LabAED2\LabAED2\bin\Debug\LabAED2.exe
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\AED\LabAED2\LabAED2\bin\Debug\LabAED2.pdb
