@@ -9,3 +9,14 @@ C:\Users\1077336\Desktop\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.csp
 C:\Users\1077336\Desktop\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.csproj.CoreCompileInputs.cache
 C:\Users\1077336\Desktop\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.exe
 C:\Users\1077336\Desktop\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.pdb
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\bin\Debug\JogoDaVelha.exe.config
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\bin\Debug\JogoDaVelha.exe
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\bin\Debug\JogoDaVelha.pdb
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.csprojResolveAssemblyReference.cache
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.Form1.resources
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.Properties.Resources.resources
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.selectOp.resources
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.csproj.GenerateResource.Cache
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.csproj.CoreCompileInputs.cache
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.exe
+C:\Users\1077336\Desktop\Trabalhos_PUC\AED\Velha\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.pdb

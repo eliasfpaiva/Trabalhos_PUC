@@ -23,6 +23,12 @@ namespace JogoDaVelha
         {
             selectOp select = new selectOp();
             select.ShowDialog();
+            if (select.DialogResult == DialogResult.Yes)
+                jogador2 = "Jogador 2";
+            else
+                jogador2 = "Computador";
+
+            MessageBox.Show(jogador2);
         }
 
         private void button1_Click(object sender, EventArgs e)
