@@ -79,7 +79,7 @@
             this.Controls.Add(this.campo_jogador2);
             this.Controls.Add(this.button1);
             this.Name = "selectOp";
-            this.Text = "Seleção de Oponente";
+            this.Text = "Oponente";
             this.ResumeLayout(false);
             this.PerformLayout();
 

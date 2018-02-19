@@ -37,7 +37,7 @@
             this.campo_c3 = new System.Windows.Forms.Button();
             this.campo_c2 = new System.Windows.Forms.Button();
             this.campo_c1 = new System.Windows.Forms.Button();
-            this.jogador_ativo = new System.Windows.Forms.Label();
+            this.Campo_jogador_ativo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // campo_a1
@@ -48,7 +48,7 @@
             this.campo_a1.Size = new System.Drawing.Size(75, 75);
             this.campo_a1.TabIndex = 0;
             this.campo_a1.UseVisualStyleBackColor = true;
-            this.campo_a1.Click += new System.EventHandler(this.button1_Click);
+            this.campo_a1.Click += new System.EventHandler(this.campo_a1_Click);
             // 
             // campo_a2
             // 
@@ -58,7 +58,7 @@
             this.campo_a2.Size = new System.Drawing.Size(75, 75);
             this.campo_a2.TabIndex = 1;
             this.campo_a2.UseVisualStyleBackColor = true;
-            this.campo_a2.Click += new System.EventHandler(this.button2_Click);
+            this.campo_a2.Click += new System.EventHandler(this.campo_a2_Click);
             // 
             // campo_a3
             // 
@@ -68,7 +68,7 @@
             this.campo_a3.Size = new System.Drawing.Size(75, 75);
             this.campo_a3.TabIndex = 2;
             this.campo_a3.UseVisualStyleBackColor = true;
-            this.campo_a3.Click += new System.EventHandler(this.button3_Click);
+            this.campo_a3.Click += new System.EventHandler(this.campo_a3_Click);
             // 
             // campo_b3
             // 
@@ -78,6 +78,7 @@
             this.campo_b3.Size = new System.Drawing.Size(75, 75);
             this.campo_b3.TabIndex = 5;
             this.campo_b3.UseVisualStyleBackColor = true;
+            this.campo_b3.Click += new System.EventHandler(this.campo_b3_Click);
             // 
             // campo_b2
             // 
@@ -87,6 +88,7 @@
             this.campo_b2.Size = new System.Drawing.Size(75, 75);
             this.campo_b2.TabIndex = 4;
             this.campo_b2.UseVisualStyleBackColor = true;
+            this.campo_b2.Click += new System.EventHandler(this.campo_b2_Click);
             // 
             // campo_b1
             // 
@@ -96,6 +98,7 @@
             this.campo_b1.Size = new System.Drawing.Size(75, 75);
             this.campo_b1.TabIndex = 3;
             this.campo_b1.UseVisualStyleBackColor = true;
+            this.campo_b1.Click += new System.EventHandler(this.campo_b1_Click);
             // 
             // campo_c3
             // 
@@ -105,6 +108,7 @@
             this.campo_c3.Size = new System.Drawing.Size(75, 75);
             this.campo_c3.TabIndex = 8;
             this.campo_c3.UseVisualStyleBackColor = true;
+            this.campo_c3.Click += new System.EventHandler(this.campo_c3_Click);
             // 
             // campo_c2
             // 
@@ -114,6 +118,7 @@
             this.campo_c2.Size = new System.Drawing.Size(75, 75);
             this.campo_c2.TabIndex = 7;
             this.campo_c2.UseVisualStyleBackColor = true;
+            this.campo_c2.Click += new System.EventHandler(this.campo_c2_Click);
             // 
             // campo_c1
             // 
@@ -123,22 +128,23 @@
             this.campo_c1.Size = new System.Drawing.Size(75, 75);
             this.campo_c1.TabIndex = 6;
             this.campo_c1.UseVisualStyleBackColor = true;
+            this.campo_c1.Click += new System.EventHandler(this.campo_c1_Click);
             // 
-            // jogador_ativo
+            // Campo_jogador_ativo
             // 
-            this.jogador_ativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.jogador_ativo.Location = new System.Drawing.Point(12, 9);
-            this.jogador_ativo.Name = "jogador_ativo";
-            this.jogador_ativo.Size = new System.Drawing.Size(237, 32);
-            this.jogador_ativo.TabIndex = 9;
-            this.jogador_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Campo_jogador_ativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Campo_jogador_ativo.Location = new System.Drawing.Point(12, 9);
+            this.Campo_jogador_ativo.Name = "Campo_jogador_ativo";
+            this.Campo_jogador_ativo.Size = new System.Drawing.Size(237, 32);
+            this.Campo_jogador_ativo.TabIndex = 9;
+            this.Campo_jogador_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(262, 297);
-            this.Controls.Add(this.jogador_ativo);
+            this.Controls.Add(this.Campo_jogador_ativo);
             this.Controls.Add(this.campo_c3);
             this.Controls.Add(this.campo_c2);
             this.Controls.Add(this.campo_c1);
@@ -166,7 +172,7 @@
         private System.Windows.Forms.Button campo_c3;
         private System.Windows.Forms.Button campo_c2;
         private System.Windows.Forms.Button campo_c1;
-        private System.Windows.Forms.Label jogador_ativo;
+        private System.Windows.Forms.Label Campo_jogador_ativo;
     }
 }
 

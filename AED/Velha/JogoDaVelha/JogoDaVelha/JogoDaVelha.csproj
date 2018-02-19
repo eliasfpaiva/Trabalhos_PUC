@@ -59,6 +59,12 @@
     <Compile Include="selectOp.Designer.cs">
       <DependentUpon>selectOp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Simbolo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simbolo.Designer.cs">
+      <DependentUpon>Simbolo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="selectOp.resx">
       <DependentUpon>selectOp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simbolo.resx">
+      <DependentUpon>Simbolo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
