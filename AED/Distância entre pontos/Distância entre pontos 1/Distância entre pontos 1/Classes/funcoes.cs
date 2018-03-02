@@ -13,15 +13,27 @@ namespace Distância_entre_pontos_1.Classes
             return Math.Sqrt((Math.Pow((p.x - q.x), 2) + Math.Pow((p.y - q.y), 2)));
         }
 
+        public static Ponto[] criaVetor(int tamanho)
+        {
+            Random random = new Random();
+            Ponto[] pontos = new Ponto[tamanho];
+
+            for (int i = 0; i < tamanho; i++)
+            {
+                pontos[i] = new Ponto(random.Next(0, tamanho), random.Next(0, tamanho));
+                Console.WriteLine(pontos[i].ToString());
+            }
+
+            return pontos;
+        }
+
         public static Ponto maisProx(Ponto[] pontos, Ponto p)
         {
             Ponto res = pontos[0];
             double dist = distancia(pontos[0], p);
-            Console.WriteLine("\nDistâncias:\n" + distancia(pontos[0], p));
 
             for (int i = 1; i < pontos.Length; i++)
             {
-                Console.WriteLine(distancia(pontos[i], p));
                 if (distancia(pontos[i], p) < dist)
                 {
                     res = pontos[i];
@@ -32,6 +44,49 @@ namespace Distância_entre_pontos_1.Classes
             Console.WriteLine("\nA menor distâncias foi: " + dist + "\n");
 
             return res;
+        }
+
+        public static void pontoMaisProx(int tamanho)
+        {
+            Random random = new Random();
+            Ponto q = new Ponto(random.Next(0, tamanho), random.Next(0, tamanho));
+
+            Console.WriteLine("O ponto foi: " + q.ToString());
+
+            Ponto pontoProximo = Funcoes.maisProx(criaVetor(tamanho), q);
+
+            Console.WriteLine("O ponto mais próximo do selecionado é o de coordenadas: " +
+                pontoProximo.ToString());
+        }
+        public static void doisPontoMaisProx(int tamanho)
+        {
+            Random random = new Random();
+            Ponto[] pontosprox = new Ponto[2];
+            double menorDistancia=(2*(tamanho*tamanho))+1;
+
+            Ponto[] pontos = criaVetor(tamanho);
+
+            foreach (Ponto q in pontos)
+            {
+                for(int i = 0; i < tamanho; i++)
+                {
+                    double distanciaAtual = distancia(q, pontos[i]);
+                    if (distanciaAtual < menorDistancia)
+                    {
+                        if (q.ToString() == pontos[i].ToString())
+                        {
+                            continue;
+                        }
+                        pontosprox[0] = q;
+                        pontosprox[1] = pontos[i];
+                        menorDistancia = distanciaAtual;
+                    }
+                }
+            }
+
+            Console.WriteLine("Os pontos mais próximos entre sí são os de coordenadas: \n" +
+                pontosprox[0].ToString() + "\n" + pontosprox[1].ToString() +
+                "\nE a distância entre eles é:" + menorDistancia);
         }
     }
 }

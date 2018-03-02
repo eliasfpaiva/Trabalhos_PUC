@@ -11,7 +11,9 @@ namespace Distância_entre_pontos_1
     {
         static void Main(string[] args)
         {
-            Ponto.pontoMaisProx(100);
+            //Funcoes.pontoMaisProx(100);
+
+            Funcoes.doisPontoMaisProx(100);
 
             Console.ReadKey();
         }
