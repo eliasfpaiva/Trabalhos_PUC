@@ -15,6 +15,7 @@ namespace Algoritmos_Ordenacao
             int tamanho = int.Parse(Console.ReadLine()) + 1; //Somo 1 ao tamanho informado, pois farei uso de sentinela
 
             int[] vet  = Funcoes.criaVetor(tamanho); //Crio um vetor do tamanho solicitado + 1, com valores aleatórios entre 0 e 10 vezes o tamanho informado
+            //Copio o vetor original para outros para garantir que cada um faça referência a um endereço de memória particular
             int[] vet1 = Funcoes.copiaVetor(vet);
             int[] vet2 = Funcoes.copiaVetor(vet);
             int[] vet3 = Funcoes.copiaVetor(vet);
@@ -23,7 +24,7 @@ namespace Algoritmos_Ordenacao
 
             Console.WriteLine("\nVetor Original: ");
             Funcoes.imprimeVetor(vet); //Imprimo o vetor original para visualização
-
+            /*
             Console.WriteLine("\n\nVetor 1 antes da ordenação por inserção: ");
             Funcoes.imprimeVetor(vet1);
             Console.WriteLine("\nVetor Ordenado por inserção: ");
@@ -43,12 +44,12 @@ namespace Algoritmos_Ordenacao
             Funcoes.imprimeVetor(vet4);
             Console.WriteLine("\nVetor Ordenado por merge: ");
             Funcoes.imprimeVetor(Algoritmos.mergeSort(vet4));
-            /*
+            */
             Console.WriteLine("\n\nVetor 5 antes da ordenação por quick: ");
             Funcoes.imprimeVetor(vet5);
             Console.WriteLine("\nVetor Ordenado por quick: ");
             Funcoes.imprimeVetor(Algoritmos.quickSort(vet5));
-            */
+            
             Console.ReadKey();
         }
     }

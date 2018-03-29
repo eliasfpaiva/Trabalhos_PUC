@@ -11,13 +11,13 @@ namespace Algoritmos_Ordenacao.Classes
         /*
          * Principal fonte para os códigos
          * Slides utiizados em aula pelo professor
-         */ 
+         */
         public static int[] insertSort(int[] vet)
         {
-            int i, j, x, tamanho=vet.Length;
+            int i, j, x, tamanho = vet.Length;
 
             //Percorre o vetor a partir da segunda posição até a útima
-            for (i=2; i < tamanho; i++)
+            for (i = 2; i < tamanho; i++)
             {
                 //x recebe o valor que está sendo comparado
                 x = vet[i];
@@ -79,7 +79,7 @@ namespace Algoritmos_Ordenacao.Classes
                 {
                     //Caso seja encontrado um par em que o valor da direita seja menor que o da esquerda, estes dois são trocados de lugar
                     //Fazendo essa troca por todo o vetor, o elemento de maior vai sendo "borbulhado para o fim do vetor"
-                    if (vet[j] > vet[j+1])
+                    if (vet[j] > vet[j + 1])
                     {
                         int temp = vet[j];
                         vet[j] = vet[j + 1];
@@ -94,27 +94,92 @@ namespace Algoritmos_Ordenacao.Classes
         public static int[] mergeSort(int[] vet)
         {
             //Para possibilitar a chamada do algorítmo usando apenas o vetor
-            //Preferí implementar desta forma, com este "Chamador" antes
-            vet = merger(vet, 1, vet.Length - 1);
+            //Preferi implementar desta forma, com este "Chamador" antes
+            merger(vet, 1, vet.Length - 1);
             return vet;
         }
 
-        public static int[] merger(int[] vet, int inicio, int fim)
+        public static void merger(int[] vet, int inicio, int fim)
         {
             //Aqui acontece o MergeSort propriamente dito.
-            if (inicio > fim)
+            //Enquanto o tamanho for maior que 1 continua a quebrar o vetor em vetor menor
+            if (inicio < fim)
             {
                 int meio = (inicio + fim) / 2;
+                //Chama novamente este método duas vezes passando a primeira metade
+                //Para o primeiro e a segunda metade do vetor para o segundo
                 merger(vet, inicio, meio);
                 merger(vet, meio + 1, fim);
+                //Reúne os vetores de forma ordenada inicio, meio e fim
                 merge(vet, inicio, meio, fim);
             }
+        }
+
+        public static void merge(int[] vet, int inicio, int meio, int fim)
+        {
+            //Este método mistura os vetores resultantes do método merge, para formar um vetor ordenado
+            int n1 = meio - inicio + 1, n2 = fim - meio, i, j, k;
+            //São instanciados 2 vetores para receberem os "vetores metades"
+            int[] vet1 = new int[n1 + 1];
+            int[] vet2 = new int[n2 + 1];
+
+            //Atribui-se os valores contidos nos vetores aos "vetores metades"
+            for (i = 0; i < n1; i++)
+                vet1[i] = vet[inicio + i];
+            for (j = 0; j < n2; j++)
+                vet2[j] = vet[meio + j + 1];
+
+            //Atribui-se um valor alto à posição final dos vetores metades
+            vet1[i] = 9999;
+            vet2[j] = 9999;
+
+            //Reinicía-se os valores das variáveis i e j
+            i = 0;
+            j = 0;
+
+            //Percorre-se o vetor final guardando de forma ordenada os valores
+            //Contidos nos vetores metade ao vetor final
+            for (k = inicio; k <= fim; k++)
+            {
+                if (vet1[i] <= vet2[j])
+                    vet[k] = vet1[i++];
+                else
+                    vet[k] = vet2[j++];
+            }
+        }
+
+        public static int[] quickSort(int[] vet)
+        {
+            //Para possibilitar a chamada do algorítmo usando apenas o vetor
+            //Preferi implementar desta forma, com este "Chamador" antes
+            quick(vet, 1, vet.Length - 1);
+
             return vet;
         }
 
-        public static void merge(int[] vet, int inicio, int  meio, int fim)
+        public static void quick(int[] vet, int esquerda, int direita)
         {
+            int i = esquerda, j = direita, temp, pivo = vet[(direita + esquerda) / 2];
 
+            while (i <= j)
+            {
+                while (vet[i] < pivo && i < direita) i++;
+                while (vet[j] > pivo && j > esquerda) j--;
+
+                if (i <= j)
+                {
+                    temp = vet[i];
+                    vet[i] = vet[j];
+                    vet[j] = temp;
+                    i++;
+                    j--;
+                }
+            }
+
+            if (j > esquerda)
+                quick(vet, esquerda, j);
+            if (i < direita)
+                quick(vet, i, direita);
         }
     }
 }
