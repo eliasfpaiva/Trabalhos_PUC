@@ -67,38 +67,54 @@ namespace Algoritmos_Ordenacao.Classes
             return vet;
         }
 
-        public static int[] criaVetor(int tamanho)
-            //Cria um vetor com valores aleatórios a partir de um tamanho informado
+        public static int[] bubbleSort(int[] vet)
         {
-            Random random = new Random();
-            int[] vet = new int[tamanho]; //Instância do vetor
+            int tamanho = vet.Length;
 
-            //Preenchimento do vetor
-            for (int i = 1; i < tamanho; i++)
-                vet[i] = random.Next(0, 10 * tamanho);
-
-            //Retorna o vetor criado
+            //Percorre todo o vetor a partir da posição de partida
+            for (int i = 1; i < tamanho - 1; i++)
+            {
+                //Percorre todo o vetor a partir da posição de partida, comparando elementos vizinhos 2 a 2
+                for (int j = 1; j < tamanho - 1; j++)
+                {
+                    //Caso seja encontrado um par em que o valor da direita seja menor que o da esquerda, estes dois são trocados de lugar
+                    //Fazendo essa troca por todo o vetor, o elemento de maior vai sendo "borbulhado para o fim do vetor"
+                    if (vet[j] > vet[j+1])
+                    {
+                        int temp = vet[j];
+                        vet[j] = vet[j + 1];
+                        vet[j + 1] = temp;
+                    }
+                }
+            }
+            //Retorna o vetor ordenado
             return vet;
         }
 
-        public static void imprimeVetor(int[] vet)
-            //Imprime um vetor passado por parâmetro
+        public static int[] mergeSort(int[] vet)
         {
-            //Percorre o vetor imprimindo todos os seus elementos na tela
-            for (int i = 1; i < vet.Length; i++)
-                Console.Write(vet[i] + " | ");
+            //Para possibilitar a chamada do algorítmo usando apenas o vetor
+            //Preferí implementar desta forma, com este "Chamador" antes
+            vet = merger(vet, 1, vet.Length - 1);
+            return vet;
         }
 
-        public static int[] copiaVetor(int[] vet)
-            //Copia um vetor em outro para criar referências diferentes na memória
+        public static int[] merger(int[] vet, int inicio, int fim)
         {
-            int tamanho = vet.Length;
-            int[] vet2 = new int[tamanho];
+            //Aqui acontece o MergeSort propriamente dito.
+            if (inicio > fim)
+            {
+                int meio = (inicio + fim) / 2;
+                merger(vet, inicio, meio);
+                merger(vet, meio + 1, fim);
+                merge(vet, inicio, meio, fim);
+            }
+            return vet;
+        }
 
-            for (int i = 0; i < tamanho; i++)
-                vet2[i] = vet[i];
-                
-            return vet2;
+        public static void merge(int[] vet, int inicio, int  meio, int fim)
+        {
+
         }
     }
 }
