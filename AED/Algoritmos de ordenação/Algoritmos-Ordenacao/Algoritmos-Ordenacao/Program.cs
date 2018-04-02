@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Algoritmos_Ordenacao.Classes;
+using System.IO;
 
 namespace Algoritmos_Ordenacao
 {
@@ -11,45 +12,101 @@ namespace Algoritmos_Ordenacao
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite o tamanho do vetor desejado: "); //Solicito o tamanho do vetor que eu desejo
-            int tamanho = int.Parse(Console.ReadLine()) + 1; //Somo 1 ao tamanho informado, pois farei uso de sentinela
+            FileStream arquivo = new FileStream("Dados da ordenação.txt", FileMode.OpenOrCreate);
+            StreamWriter registrador = new StreamWriter(arquivo);
+            {
+                int tamanho = 2000;
+                for (int i = 1; i < 128; i *= 2)
+                {
+                    int[] vet = Funcoes.criaVetorPeloArquivo(tamanho);
+                    registrador.WriteLine("Ordenação com vetor de " + tamanho + " elementos");
+                    tamanho = i * 2000;
 
-            int[] vet  = Funcoes.criaVetor(tamanho); //Crio um vetor do tamanho solicitado + 1, com valores aleatórios entre 0 e 10 vezes o tamanho informado
-            //Copio o vetor original para outros para garantir que cada um faça referência a um endereço de memória particular
-            int[] vet1 = Funcoes.copiaVetor(vet);
-            int[] vet2 = Funcoes.copiaVetor(vet);
-            int[] vet3 = Funcoes.copiaVetor(vet);
-            int[] vet4 = Funcoes.copiaVetor(vet);
-            int[] vet5 = Funcoes.copiaVetor(vet);
+                    registrador.Write("\nINSERÇÃO");
+                    for (int j = 1; j <= 5; j++)
+                    {                        
+                        var watch = System.Diagnostics.Stopwatch.StartNew();
+                        Algoritmos.insertSort(Funcoes.copiaVetor(vet));
+                        watch.Stop();
+                        var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
+                        registrador.Write("|" + elapsedMs + "|");
 
-            Console.WriteLine("\nVetor Original: ");
-            Funcoes.imprimeVetor(vet); //Imprimo o vetor original para visualização
-            /*
-            Console.WriteLine("\n\nVetor 1 antes da ordenação por inserção: ");
-            Funcoes.imprimeVetor(vet1);
-            Console.WriteLine("\nVetor Ordenado por inserção: ");
-            Funcoes.imprimeVetor(Algoritmos.insertSort(vet1));
 
-            Console.WriteLine("\n\nVetor 2 antes da ordenação por seleção: ");
-            Funcoes.imprimeVetor(vet2);
-            Console.WriteLine("\nVetor Ordenado por seleção: ");
-            Funcoes.imprimeVetor(Algoritmos.selectSort(vet2));
-            
-            Console.WriteLine("\n\nVetor 3 antes da ordenação por bolha: ");
-            Funcoes.imprimeVetor(vet3);
-            Console.WriteLine("\nVetor Ordenado por bolha: ");
-            Funcoes.imprimeVetor(Algoritmos.bubbleSort(vet3));
-            
-            Console.WriteLine("\n\nVetor 4 antes da ordenação por merge: ");
-            Funcoes.imprimeVetor(vet4);
-            Console.WriteLine("\nVetor Ordenado por merge: ");
-            Funcoes.imprimeVetor(Algoritmos.mergeSort(vet4));
-            */
-            Console.WriteLine("\n\nVetor 5 antes da ordenação por quick: ");
-            Funcoes.imprimeVetor(vet5);
-            Console.WriteLine("\nVetor Ordenado por quick: ");
-            Funcoes.imprimeVetor(Algoritmos.quickSort(vet5));
-            
+                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
+                        var allocationInMB = ramUsage / (1024 * 1024);
+                        registrador.Write("|" + allocationInMB);
+                    }
+                    registrador.Write("\nSELEÇÃO");
+                    for (int j = 1; j <= 5; j++)
+                    {
+                        var watch = System.Diagnostics.Stopwatch.StartNew();
+                        Algoritmos.selectSort(Funcoes.copiaVetor(vet));
+                        watch.Stop();
+                        var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
+                        registrador.Write("|" + elapsedMs + "|");
+
+
+                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
+                        var allocationInMB = ramUsage / (1024 * 1024);
+                        registrador.Write("|" + allocationInMB);
+                    }
+                    registrador.Write("\nBOLHA");
+                    for (int j = 1; j <= 5; j++)
+                    {
+                        var watch = System.Diagnostics.Stopwatch.StartNew();
+                        Algoritmos.bubbleSort(Funcoes.copiaVetor(vet));
+                        watch.Stop();
+                        var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
+                        registrador.Write("|" + elapsedMs + "|");
+
+
+                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
+                        var allocationInMB = ramUsage / (1024 * 1024);
+                        registrador.Write("|" + allocationInMB);
+                    }
+                    /*registrador.Write("\nMERGESORT");
+                    for (int j = 1; j <= 5; j++)
+                    {
+                        var watch = System.Diagnostics.Stopwatch.StartNew();
+                        Algoritmos.mergeSort(Funcoes.copiaVetor(vet));
+                        watch.Stop();
+                        var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
+                        registrador.Write("|" + elapsedMs + "|");
+                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
+                        var allocationInMB = ramUsage / (1024 * 1024);
+                        registrador.Write("|" + allocationInMB);
+                    }*/
+                    //Não consegui fazer o MergeSort funcionar com o vetor gerado pelo arquivo
+                    //Mas, funciona perfeitamente com um vetor aleatório.
+                    registrador.Write("\nQUICKSORT");
+                    for (int j = 1; j <= 5; j++)
+                    {
+                        var watch = System.Diagnostics.Stopwatch.StartNew();
+                        Algoritmos.quickSort(Funcoes.copiaVetor(vet));
+                        watch.Stop();
+                        var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
+                        registrador.Write("|" + elapsedMs + "|");
+                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
+                        var allocationInMB = ramUsage / (1024 * 1024);
+                        registrador.Write("|" + allocationInMB);
+                    }
+                    registrador.Write("\nBOLHA COM SELEÇÃO");
+                    for (int j = 1; j <= 5; j++)
+                    {
+                        var watch = System.Diagnostics.Stopwatch.StartNew();
+                        Algoritmos.bubbleSelectSort(Funcoes.copiaVetor(vet));
+                        watch.Stop();
+                        var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
+                        registrador.Write("|" + elapsedMs + "|");
+                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
+                        var allocationInMB = ramUsage / (1024 * 1024);
+                        registrador.Write("|" + allocationInMB);
+                    }
+                    registrador.WriteLine("\n");
+                }
+            }
+            registrador.Close();
+            Console.WriteLine("Ordenação Concluida");
             Console.ReadKey();
         }
     }

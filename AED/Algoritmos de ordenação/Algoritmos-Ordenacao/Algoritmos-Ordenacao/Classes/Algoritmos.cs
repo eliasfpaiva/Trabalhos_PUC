@@ -99,7 +99,7 @@ namespace Algoritmos_Ordenacao.Classes
             return vet;
         }
 
-        public static void merger(int[] vet, int inicio, int fim)
+        private static void merger(int[] vet, int inicio, int fim)
         {
             //Aqui acontece o MergeSort propriamente dito.
             //Enquanto o tamanho for maior que 1 continua a quebrar o vetor em vetor menor
@@ -115,7 +115,7 @@ namespace Algoritmos_Ordenacao.Classes
             }
         }
 
-        public static void merge(int[] vet, int inicio, int meio, int fim)
+        private static void merge(int[] vet, int inicio, int meio, int fim)
         {
             //Este método mistura os vetores resultantes do método merge, para formar um vetor ordenado
             int n1 = meio - inicio + 1, n2 = fim - meio, i, j, k;
@@ -157,15 +157,25 @@ namespace Algoritmos_Ordenacao.Classes
             return vet;
         }
 
-        public static void quick(int[] vet, int esquerda, int direita)
+        private static void quick(int[] vet, int esquerda, int direita)
         {
+            //Atribuo a i e j os valores dos indices extremos do vetor
+            //Escolo o pivô como sendo o elemento central
             int i = esquerda, j = direita, temp, pivo = vet[(direita + esquerda) / 2];
 
+            //Percorro todo o vetor até que i ultrapasse o valor de j
+            //Eles são iterados em sentidos opostos
             while (i <= j)
             {
+                //Enquanto i não chegar à outra extremidade e não for igual ao pivô
+                //Atualizo o valor incrementando 1
                 while (vet[i] < pivo && i < direita) i++;
+                //Enquanto j não chegar à outra extremidade e não for igual ao pivô
+                //Atualizo o valor decrementando 1
                 while (vet[j] > pivo && j > esquerda) j--;
 
+                //Após a seleção de i e de j testo para saber se devem ser trocados
+                //Se o teste for positivo troco os falores contidos nestas posições
                 if (i <= j)
                 {
                     temp = vet[i];
@@ -176,10 +186,39 @@ namespace Algoritmos_Ordenacao.Classes
                 }
             }
 
+            //Caso j ainda não tenha alcançado o outro etremo
+            //Chamo o algoritmo novamente passando uma parte do vetor
             if (j > esquerda)
                 quick(vet, esquerda, j);
+            //Caso i ainda não tenha alcançado o outro etremo
+            //Chamo o algoritmo novamente passando uma parte do vetor
             if (i < direita)
                 quick(vet, i, direita);
+        }
+
+        public static int[] bubbleSelectSort(int[] vet)
+        {
+            int tamanho = vet.Length;
+
+            //Percorro todo o vetor a partir da primeira posição
+            //Fixando a cada passada o elemento com indice igual ao número da passada
+            for(int i = 1; i < tamanho; i++)
+            {
+                //Percorro todo o vetor a partit da posição imediatamente à direita da 
+                //Que tem índice com o número da passada buscando elementos menores
+                for (int j = i+1; j < tamanho; j++)
+                {
+                    //Toda vez que encontro um elemento menor efetuo a troca
+                    if (vet[i] > vet[j])
+                    {
+                        int temp = vet[i];
+                        vet[i] = vet[j];
+                        vet[j] = temp;
+                    }
+                }
+            }
+            //Retorno o vetor ordenado.
+            return vet;
         }
     }
 }
