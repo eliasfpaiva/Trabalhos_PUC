@@ -130,8 +130,8 @@ namespace Algoritmos_Ordenacao.Classes
                 vet2[j] = vet[meio + j + 1];
 
             //Atribui-se um valor alto à posição final dos vetores metades
-            vet1[i] = 9999;
-            vet2[j] = 9999;
+            vet1[i] = int.MaxValue;
+            vet2[j] = int.MaxValue;
 
             //Reinicía-se os valores das variáveis i e j
             i = 0;

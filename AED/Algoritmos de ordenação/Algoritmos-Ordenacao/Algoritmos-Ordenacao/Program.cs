@@ -16,7 +16,7 @@ namespace Algoritmos_Ordenacao
             StreamWriter registrador = new StreamWriter(arquivo);
             {
                 int tamanho = 2000;
-                for (int i = 1; i < 128; i *= 2)
+                for (int i = 1; i <= 128; i *= 2)
                 {
                     int[] vet = Funcoes.criaVetorPeloArquivo(tamanho);
                     registrador.WriteLine("Ordenação com vetor de " + tamanho + " elementos");
@@ -64,7 +64,7 @@ namespace Algoritmos_Ordenacao
                         var allocationInMB = ramUsage / (1024 * 1024);
                         registrador.Write("|" + allocationInMB);
                     }
-                    /*registrador.Write("\nMERGESORT");
+                    registrador.Write("\nMERGESORT");
                     for (int j = 1; j <= 5; j++)
                     {
                         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -75,7 +75,7 @@ namespace Algoritmos_Ordenacao
                         var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
                         var allocationInMB = ramUsage / (1024 * 1024);
                         registrador.Write("|" + allocationInMB);
-                    }*/
+                    }
                     //Não consegui fazer o MergeSort funcionar com o vetor gerado pelo arquivo
                     //Mas, funciona perfeitamente com um vetor aleatório.
                     registrador.Write("\nQUICKSORT");
