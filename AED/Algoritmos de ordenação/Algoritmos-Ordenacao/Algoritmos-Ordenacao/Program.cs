@@ -12,17 +12,19 @@ namespace Algoritmos_Ordenacao
     {
         static void Main(string[] args)
         {
-            FileStream arquivo = new FileStream("Dados da ordenação.txt", FileMode.OpenOrCreate);
+            FileStream arquivo = new FileStream("Dados da ordenação vetor ordenado Decrescente.txt", FileMode.OpenOrCreate);
             StreamWriter registrador = new StreamWriter(arquivo);
             {
                 int tamanho = 2000;
-                for (int i = 1; i <= 128; i *= 2)
+                for (int i = 2; i <= 128; i *= 2)
                 {
                     int[] vet = Funcoes.criaVetorPeloArquivo(tamanho);
-                    registrador.WriteLine("Ordenação com vetor de " + tamanho + " elementos");
+                    Algoritmos.bubbleSortInvert(vet);
+                    registrador.WriteLine("\n\nOrdenação com vetor de " + tamanho + " elementos");
                     tamanho = i * 2000;
 
-                    Console.WriteLine("\nINSERÇÃO");
+                    Console.WriteLine("INSERÇÃO");
+                    registrador.Write("INSERÇÃO: ");
                     for (int j = 1; j <= 5; j++)
                     {                        
                         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -30,13 +32,10 @@ namespace Algoritmos_Ordenacao
                         watch.Stop();
                         var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
                         registrador.Write(elapsedMs + "|");
-
-
-                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
-                        var allocationInMB = ramUsage / (1024 * 1024);
-                        registrador.WriteLine(allocationInMB);
                     }
-                    Console.WriteLine("\nSELEÇÃO");
+                    registrador.WriteLine();
+                    Console.WriteLine("SELEÇÃO");
+                    registrador.Write("SELEÇÃO: ");
                     for (int j = 1; j <= 5; j++)
                     {
                         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -44,13 +43,10 @@ namespace Algoritmos_Ordenacao
                         watch.Stop();
                         var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
                         registrador.Write(elapsedMs + "|");
-
-
-                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
-                        var allocationInMB = ramUsage / (1024 * 1024);
-                        registrador.WriteLine(allocationInMB);
                     }
-                    Console.WriteLine("\nBOLHA");
+                    registrador.WriteLine();
+                    Console.WriteLine("BOLHA");
+                    registrador.Write("BOLHA: ");
                     for (int j = 1; j <= 5; j++)
                     {
                         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -58,13 +54,10 @@ namespace Algoritmos_Ordenacao
                         watch.Stop();
                         var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
                         registrador.Write(elapsedMs + "|");
-
-
-                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
-                        var allocationInMB = ramUsage / (1024 * 1024);
-                        registrador.WriteLine(allocationInMB);
                     }
-                    Console.WriteLine("\nMERGESORT");
+                    registrador.WriteLine();
+                    Console.WriteLine("MERGESORT");
+                    registrador.Write("MERGESORT: ");
                     for (int j = 1; j <= 5; j++)
                     {
                         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -72,12 +65,10 @@ namespace Algoritmos_Ordenacao
                         watch.Stop();
                         var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
                         registrador.Write(elapsedMs + "|");
-
-                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
-                        var allocationInMB = ramUsage / (1024 * 1024);
-                        registrador.WriteLine(allocationInMB);
                     }
-                    Console.WriteLine("\nQUICKSORT");
+                    registrador.WriteLine();
+                    Console.WriteLine("QUICKSORT");
+                    registrador.Write("QUICKSORT: ");
                     for (int j = 1; j <= 5; j++)
                     {
                         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -85,12 +76,10 @@ namespace Algoritmos_Ordenacao
                         watch.Stop();
                         var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
                         registrador.Write(elapsedMs + "|");
-
-                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
-                        var allocationInMB = ramUsage / (1024 * 1024);
-                        registrador.WriteLine(allocationInMB);
                     }
-                    Console.WriteLine("\nBOLHA COM SELEÇÃO");
+                    registrador.WriteLine();
+                    Console.WriteLine("BOLHA COM SELEÇÃO");
+                    registrador.Write("BOLHA COM SELEÇÃO: ");
                     for (int j = 1; j <= 5; j++)
                     {
                         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -98,12 +87,8 @@ namespace Algoritmos_Ordenacao
                         watch.Stop();
                         var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
                         registrador.Write(elapsedMs + "|");
-
-                        var ramUsage = System.Diagnostics.Process.GetCurrentProcess().PeakWorkingSet64;
-                        var allocationInMB = ramUsage / (1024 * 1024);
-                        registrador.WriteLine(allocationInMB);
                     }
-                    Console.WriteLine("\n");
+                    Console.WriteLine();
                 }
             }
             registrador.Close();

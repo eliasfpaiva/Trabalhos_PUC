@@ -220,5 +220,29 @@ namespace Algoritmos_Ordenacao.Classes
             //Retorno o vetor ordenado.
             return vet;
         }
+
+        public static int[] bubbleSortInvert(int[] vet)
+        {
+            int tamanho = vet.Length;
+
+            //Percorre todo o vetor a partir da posição de partida
+            for (int i = 1; i < tamanho - 1; i++)
+            {
+                //Percorre todo o vetor a partir da posição de partida, comparando elementos vizinhos 2 a 2
+                for (int j = 1; j < tamanho - 1; j++)
+                {
+                    //Caso seja encontrado um par em que o valor da direita seja menor que o da esquerda, estes dois são trocados de lugar
+                    //Fazendo essa troca por todo o vetor, o elemento de maior vai sendo "borbulhado para o fim do vetor"
+                    if (vet[j] < vet[j + 1])
+                    {
+                        int temp = vet[j];
+                        vet[j] = vet[j + 1];
+                        vet[j + 1] = temp;
+                    }
+                }
+            }
+            //Retorna o vetor ordenado
+            return vet;
+        }
     }
 }
