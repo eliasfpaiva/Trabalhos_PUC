@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Carro.cs" />
-    <Compile Include="Classes\Celula.cs" />
+    <Compile Include="Classes\Estacionamento.cs" />
+    <Compile Include="Classes\Teste.cs" />
+    <Compile Include="Classes\Vaga.cs" />
     <Compile Include="Classes\Pilha.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

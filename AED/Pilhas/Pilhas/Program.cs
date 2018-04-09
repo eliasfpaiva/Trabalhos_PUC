@@ -12,12 +12,7 @@ namespace Pilhas
     {
         static void Main(string[] args)
         {
-            Pilha estacionamento = new Pilha(10);
-
-            for (int i = 1; i <= 10; i++)
-                estacionamento.empilha("DBZ-18" + (i + 10));
-
-            estacionamento.imprime();
+            Teste.testar();
 
             Console.ReadKey();
         }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{026F99FB-6129-4ECE-90E5-AF758D51817A}</ProjectGuid>
+    <ProjectGuid>{0BE81A7E-76E7-4A73-85B4-D3E476AC871A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Fila</RootNamespace>
-    <AssemblyName>Fila</AssemblyName>
+    <RootNamespace>Filas</RootNamespace>
+    <AssemblyName>Filas</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,6 +45,7 @@
     <Compile Include="Classes\Aviao.cs" />
     <Compile Include="Classes\Celula.cs" />
     <Compile Include="Classes\Fila.cs" />
+    <Compile Include="Classes\Teste.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
