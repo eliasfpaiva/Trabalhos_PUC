@@ -20,8 +20,11 @@ namespace Agenda_Telefônica
                 Console.WriteLine("###  AGENDA ###");
                 Console.WriteLine("Escolha uma opção: ");
                 Console.WriteLine("1 - Inserir um novo contato");
-                Console.WriteLine("2 - Listar Contatos");
-                Console.WriteLine("3 - Pesquisar por Codigo");
+                Console.WriteLine("2 - Listar Contatos por Código"); ;
+                Console.WriteLine("3 - Listar Contatos por Nome"); ;
+                Console.WriteLine("4 - Listar Contatos por Data de Nascimento");
+                Console.WriteLine("5 - Pesquisar por Codigo");
+                Console.WriteLine("6 - Remover um contato");
                 Console.WriteLine("0 - Sair");
                 aux = Console.ReadLine();
 
@@ -58,7 +61,7 @@ namespace Agenda_Telefônica
         {
             Contato novo = new Contato();
 
-            novo.Codigo = 1;
+            novo.Codigo = numContatos + 1;
             novo.Nome = "Kleber";
             novo.Telefone = "0000-0000";
             novo.Email = "klebersouza@pucminas.br";
@@ -66,6 +69,31 @@ namespace Agenda_Telefônica
 
             agenda[numContatos] = novo;
             numContatos++;
+        }
+
+        private static void RemoverContato(Contato[] agenda, ref int numContatos)
+        {
+            int Codigo;
+            Console.Clear();
+            Console.Write("Informe o código do contato que deseja excluir: ");
+            int.TryParse(Console.ReadLine(), out Codigo);
+
+            int posicaoRemover = -1;
+
+            for (int i = 0; i < numContatos; i++)
+            {
+                if (agenda[i].Codigo == Codigo)
+                {
+                    posicaoRemover = i;
+                    numContatos--;
+                }
+            }
+
+            if (posicaoRemover != -1)
+                for (int i = posicaoRemover; i < numContatos; i++)
+                    agenda[i] = agenda[i + 1];
+            else
+                Console.WriteLine("Contato não encontrado!");
         }
 
         public static void ListarContatos(Contato[] agenda, int numContatos)
@@ -95,6 +123,17 @@ namespace Agenda_Telefônica
             for (int i = 0; i < numContatos - 1; i++)
                 for (int j = 0; j < numContatos - i - 1; j++)
                     if (agenda[j].Codigo > agenda[j + 1].Codigo)
+                    {
+                        Contato aux = agenda[j];
+                        agenda[j] = agenda[j + 1];
+                        agenda[j + 1] = aux;
+                    }
+        }
+        public static void OrdenarPorData(Contato[] agenda, int numContatos)
+        {
+            for (int i = 0; i < numContatos - 1; i++)
+                for (int j = 0; j < numContatos - i - 1; j++)
+                    if (agenda[j].DataNascimento.CompareTo(agenda[j + 1].DataNascimento) > 0)
                     {
                         Contato aux = agenda[j];
                         agenda[j] = agenda[j + 1];
@@ -139,30 +178,42 @@ namespace Agenda_Telefônica
                 switch (opcao)
                 {
                     case 1:
-                        PreencherContatos(agenda, ref numContatos, 10);
+                        InserirContato(agenda, ref numContatos);
                         break;
+
                     case 2:
                         OrdenarPorCodigo(agenda, numContatos);
                         ListarContatos(agenda, numContatos);
                         break;
-                    case 3:
 
+                    case 3:
+                        OrdenarPorNome(agenda, numContatos);
+                        ListarContatos(agenda, numContatos);
+                        break;
+
+                    case 4:
+                        OrdenarPorData(agenda, numContatos);
+                        ListarContatos(agenda, numContatos);
+                        break;
+
+                    case 5:
                         OrdenarPorCodigo(agenda, numContatos);
                         Contato query = PesquisaPorCodigo(agenda,
                             numContatos,
                             13);
-
                         if (query == null)
                             Console.WriteLine("Contato não encontrado!");
                         else
                             Console.WriteLine(query.Nome);
 
                         break;
+
+                    case 6:
+                        RemoverContato(agenda, ref numContatos);
+                        break;
                 }
 
             } while (opcao != 0);
-
-            Console.ReadKey();
         }
     }
 }
