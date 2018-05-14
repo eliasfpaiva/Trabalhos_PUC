@@ -8,14 +8,13 @@ namespace Pilha_4_Parentesis.Classes
 {
     public class Celula
     {
-        private int Dado;
-        public Celula prox { get; set; }
+        public int Dado;
+        public Celula prox;
 
         public Celula(Celula prox, int dado)
         {
             this.Dado = dado;
             this.prox = prox;
         }
-        public int getDado() { return Dado; }
     }
 }
