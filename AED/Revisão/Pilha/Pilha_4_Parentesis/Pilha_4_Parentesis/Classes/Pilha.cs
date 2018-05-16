@@ -40,7 +40,7 @@ namespace Pilha_4_Parentesis.Classes
             }
             Console.WriteLine();
         }
-        public bool vazia() { return tam > 0; }
+        public bool vazia() { return tam == 0; }
         public int tamanho() { return tam; }
     }
 }
