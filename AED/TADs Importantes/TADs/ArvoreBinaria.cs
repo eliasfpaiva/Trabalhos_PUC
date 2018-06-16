@@ -3,15 +3,14 @@
 namespace TADs_Importantes.TADs
 {
     internal class ArvoreBinaria
-    {
-        CelulaDupla frente;
-        CelulaDupla tras;
+    {/*
+        CelulaTripla raiz;
         int tamanho;
 
         public ArvoreBinaria()
         {
             tamanho = 0;
-            frente = tras = new CelulaDupla();
+            frente = tras = new CelulaTripla();
         }
 
         public void adcionarAtras(int dado)
@@ -130,5 +129,5 @@ namespace TADs_Importantes.TADs
 
         public bool vazia() { return tamanho == 0; }
         public int getTamanho() { return tamanho; }
-    }
+    */}
 }

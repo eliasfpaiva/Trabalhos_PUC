@@ -1,0 +1,111 @@
+//====================================
+
+//Questão 1
+public static class questao1
+    {
+        public static void rodar()
+        {
+            Fila fila = new Fila();
+
+            for (int i = 0; i < 15; i++)
+            {
+                fila.enfileirar(i);
+            }
+
+
+            Console.WriteLine("Fila Original!");
+            fila.imprimir();
+
+            Fila filaInvertida = inverter(fila);
+
+            Console.WriteLine("\nFila Invertida!");
+            filaInvertida.imprimir();
+        }
+
+        private static Fila inverter(Fila fila)
+        {
+            Fila filaInvertida = new Fila();
+            Pilha pilha = new Pilha();
+            int tamanhoFila = fila.getTamanho();
+
+            for (int i = 0; i < tamanhoFila; i++)
+            {
+                pilha.empilhar(fila.desenfileirar());
+            }
+
+            for (int i = 0; i < tamanhoFila; i++)
+            {
+                filaInvertida.enfileirar(pilha.desempilhar());
+            }
+
+            return filaInvertida;
+        }
+    }
+
+
+//====================================
+
+//Questão 2
+public int maior()
+        {
+            CelulaTripla temp = Raiz;
+            while (temp.filhoDireito != null)
+            {
+                temp = temp.filhoDireito;
+            }
+            return temp.dado;
+        }
+
+//====================================
+
+//Questão 3
+
+        public void imprimeDecrescente()
+        {
+            if (Raiz == null)
+                Console.WriteLine("Esta árvore não possui elementos");
+            else
+                impressor(Raiz);
+        }
+        private void impressor(CelulaTripla no)
+        {
+            if (no != null)
+            {
+                impressor(no.filhoDireito);
+                Console.WriteLine(no.dado);
+                impressor(no.filhoEsquerdo);
+            }
+        }
+
+
+//====================================
+
+//Questão 4
+//Letra a) Funções Hash
+public int hash(int num)
+        {
+            return num % 31;
+        }
+
+public int hash2(int num)
+        {
+            return num % 13;
+        }
+
+
+//Letra b) Valores melhor e pior caso
+Pior caso Hash 1: 7
+Pior caso Hash 2: 21
+Melhor caso Hash 1: 2
+Melhor caso Hash 2: 2
+
+//Letra c)
+A função 1 é melhor pois é igual à dois no melhor caso e melhor que ela
+no pior caso, porque usa um fator hash maior, o que deixa a TabelaHash 
+com mais possibilidades de alocação e gera listas menores em cada posição.
+
+Assim Mais listas estão disponíveis para receber os valores distribuindo mais a entrada.
+
+
+
+OBS.: Eu não estava com a implementação da Árvore Binária na primeira etapa da aula

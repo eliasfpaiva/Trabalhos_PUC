@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Prova\questao1.cs" />
+    <Compile Include="Prova\questao2.cs" />
+    <Compile Include="Prova\questao3.cs" />
+    <Compile Include="Prova\questao4.cs" />
+    <Compile Include="TADs\Arvore.cs" />
     <Compile Include="TADs\ArvoreBinaria.cs" />
     <Compile Include="TADs\Celula.cs" />
     <Compile Include="TADs\CelulaDupla.cs" />
