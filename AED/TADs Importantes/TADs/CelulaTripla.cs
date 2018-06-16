@@ -12,5 +12,10 @@ namespace TADs_Importantes.TADs
         public CelulaTripla pai;
         public CelulaTripla filhoEsquerdo;
         public CelulaTripla filhoDireito;
+        
+        public override string ToString()
+        {
+            return "Dado: " + dado;
+        }
     }
 }

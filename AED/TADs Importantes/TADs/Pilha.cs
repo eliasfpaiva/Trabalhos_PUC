@@ -38,6 +38,8 @@ namespace TADs_Importantes.TADs
 
         public void imprimir()
         {
+            if (vazia()) { Console.WriteLine("Pilha vazia!"); }
+
             Celula temp = topo;
             while (temp != null)
             {

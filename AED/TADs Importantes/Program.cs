@@ -14,15 +14,15 @@ namespace TADs_Importantes
         {
             Pilha p = new Pilha();
             Fila f = new Fila();
-            f.enfileirar(1);
-            f.enfileirar(10);
-            f.enfileirar(20);
-            Console.WriteLine(f.desenfileirar());
-
-
             Lista l = new Lista();
+            TabelaHash th = new TabelaHash(3);
+
+            for (int i = 0; i < 10; i++)
+            {
+                th.adicionar(i);
+            }
+            
             ArvoreBinaria ab = new ArvoreBinaria();
-            TabelaHash th = new TabelaHash();
 
             Console.ReadKey();
         }

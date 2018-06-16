@@ -11,7 +11,10 @@ namespace TADs_Importantes.TADs
         public int dado;
         public Celula prox;
 
-        public Celula() { }
+        public Celula()
+        {
+            prox = null;
+        }
 
         public Celula(int dado, Celula prox)
         {
