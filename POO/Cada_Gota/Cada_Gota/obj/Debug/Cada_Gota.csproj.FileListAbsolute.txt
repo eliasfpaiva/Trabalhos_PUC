@@ -154,3 +154,24 @@ D:\Elias\Projetos\trabalho_poo\Cada_Gota\Cada_Gota\bin\Debug\Cada_Gota.exe.manif
 D:\Elias\Projetos\trabalho_poo\Cada_Gota\Cada_Gota\bin\Debug\Cada_Gota.application
 D:\Elias\Projetos\trabalho_poo\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.exe.manifest
 D:\Elias\Projetos\trabalho_poo\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.application
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.csprojAssemblyReference.cache
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Properties.Resources.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Telas.cadastrar_conta.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Telas.cadastrar_imovel.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Telas.cadastrar_novo_consumidor.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Telas.consultar_conta.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Telas.consultar_conta_mais_cara.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Telas.consultar_valor_medio.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.Telas.consultar_variacao.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.menu_principal.resources
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.csproj.GenerateResource.cache
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.csproj.CoreCompileInputs.cache
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\bin\Debug\Cada_Gota.exe.config
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\bin\Debug\Cada_Gota.exe.manifest
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\bin\Debug\Cada_Gota.application
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\bin\Debug\Cada_Gota.exe
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\bin\Debug\Cada_Gota.pdb
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.exe.manifest
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.application
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.exe
+C:\Users\Familia Paiva\Desktop\Trabalhos_PUC\POO\Cada_Gota\Cada_Gota\obj\Debug\Cada_Gota.pdb
