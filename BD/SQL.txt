@@ -1,0 +1,41 @@
+create table sala (
+	cd_sala integer primary key,
+	capacidade integer,
+	cd_predio integer not null
+);
+
+create table turma (
+	cd_turma integer primary key,
+	disciplina varchar(30) not null,
+	cd_professor integer not null,
+	cd_sala integer not null
+);
+
+create table professor (
+	cd_professor integer primary key,
+	nome varchar(50) not null,
+	data_nascimento date not null
+);
+
+create table predio (
+	cd_predio integer primary key,
+	numero integer not null
+);
+
+create table turma_aluno (
+	cd_turma_aluno integer primary key,
+	cd_aluno integer not null,
+	cd_turma integer not null
+);
+
+create table aluno (
+	cd_aluno integer primary key,
+	nome varchar(50) not null,
+	data_nascimento date not null
+);
+
+alter table sala add constraint fk_predio foreign key (cd_predio) references predio (cd_predio);
+alter table turma add constraint fk_professor foreign key (cd_professor) references professor (cd_professor);
+alter table turma add constraint fk_sala foreign key (cd_sala) references sala (cd_sala);
+alter table turma_aluno add constraint fk_aluno foreign key (cd_aluno) references aluno (cd_aluno);
+alter table turma_aluno add constraint fk_turma foreign key (cd_turma) references turma (cd_turma);
