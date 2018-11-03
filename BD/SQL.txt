@@ -23,7 +23,6 @@ create table predio (
 );
 
 create table turma_aluno (
-	cd_turma_aluno integer primary key,
 	cd_aluno integer not null,
 	cd_turma integer not null
 );
